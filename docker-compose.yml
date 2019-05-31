@@ -1,0 +1,31 @@
+version:  '2'
+services:
+  rabbitmq:
+    image: rabbitmq:3-management
+    restart: always
+    ports:
+      - 15673:15672
+  registry:
+    image: tiny3/registry
+    ports:
+      - "8761:8761"
+  config:
+    image: tiny3/config
+    ports:
+      - "8888:8888"
+  monitor:
+    image: tiny3/monitor
+    ports:
+      - "8040:8040"
+  gateway:
+    image: tiny3/gateway
+    ports:
+      - "8060:8060"
+  zipkin:
+    image: tiny3/zipkin
+    ports:
+      - "9411:9411"
+  auth-service:
+    image: tiny3/auth-service
+    ports:
+      - "5000:5000"
