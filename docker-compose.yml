@@ -22,7 +22,8 @@ services:
     ports:
       - "8060:8060"
   zipkin:
-    image: tiny3/zipkin
+    image: openzipkin/zipkin
+    container_name: tiny3/zipkin
     ports:
       - "9411:9411"
   auth-service:

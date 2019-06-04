@@ -20,7 +20,6 @@
         <module>registry</module>
         <module>config</module>
         <module>monitor</module>
-        <module>zipkin</module>
         <module>gateway</module>
         <module>auth-service</module>
     </modules>
