@@ -1,4 +1,4 @@
-FROM java:8
+FROM openjdk:11
 VOLUME /tmp
 ADD ./target/auth-service.jar /auth-service.jar
 RUN bash -c 'touch /auth-service.jar'

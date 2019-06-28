@@ -1,4 +1,4 @@
-FROM java:8
+FROM openjdk:11
 VOLUME /tmp
 ADD ./target/monitor.jar /monitor.jar
 RUN bash -c 'touch /monitor.jar'
