@@ -29,8 +29,9 @@
         <java.version>11</java.version>
         <docker.plugin.version>1.0.0</docker.plugin.version>
         <docker.image.prefix>tiny3</docker.image.prefix>
-        <spring.cloud.version>Greenwich.SR2</spring.cloud.version>
+        <spring.cloud.version>Greenwich.RELEASE</spring.cloud.version>
         <spring-boot-admin.version>2.1.5</spring-boot-admin.version>
+        <zipkin-server.version>2.11.4</zipkin-server.version>
     </properties>
 
     <dependencies>
