@@ -17,7 +17,7 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/liming495/tiny3
+          uri: https://github.com/liming495/tiny3/tree/master
           search-paths: config-repo
   rabbitmq:
     host: rabbitmq
