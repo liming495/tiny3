@@ -15,6 +15,7 @@ import org.springframework.security.oauth2.config.annotation.web.configurers.Aut
 import org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerSecurityConfigurer;
 import org.springframework.security.oauth2.provider.token.store.JdbcTokenStore;
 
+import javax.annotation.Resource;
 import javax.sql.DataSource;
 
 /**
@@ -25,9 +26,9 @@ import javax.sql.DataSource;
 @Configuration
 @EnableAuthorizationServer
 public class OAuthConfiguration extends AuthorizationServerConfigurerAdapter {
-    @Autowired
+    @Resource
     private DataSource dataSource;
-    @Autowired
+    @Resource
     private AuthenticationManager auth;
     private BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
 
