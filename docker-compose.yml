@@ -1,10 +1,25 @@
-version:  '2'
+version:  '3'
 services:
   rabbitmq:
     image: rabbitmq:3-management
     restart: always
     ports:
       - 15673:15672
+  xxljob:
+    image: docker.io/xuxueli/xxl-job-admin:2.1.0
+    restart: always
+    container_name: xxljob
+    ports:
+      - 8001:8080
+    depends_on:
+      - db
+    volumes:
+      - /home/middleware/xxljob/applogs:/data/applogs
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "200k"
+        max-file: "10"
   registry:
     image: tiny3/registry
     ports:
